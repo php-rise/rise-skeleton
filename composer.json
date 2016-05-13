@@ -13,10 +13,11 @@
 	"repositories": [
 		{
 			"type": "vcs",
-			"url": "git@bitbucket-hwguyguy-team:hwguyguy-team/php-rise.git"
+			"url": "git@bitbucket.org:hwguyguy-team/php-rise.git"
 		}
 	],
 	"require": {
+		"php": ">=7.0.0",
 		"hwguyguy/rise": "0.3.0"
 	},
 	"autoload": {
