@@ -1,0 +1,27 @@
+#!/usr/bin/env php
+<?php
+/**
+ * Usage:
+ *
+ * $ php bin/rise <command> ...
+ *
+ * Create database and the migration table.
+ * $ php bin/rise database initialize
+ *
+ * Create a migration file.
+ * $ php bin/rise database migration create <migration name>
+ *
+ * Migrate changes to database.
+ * $ php bin/rise database migration migrate
+ *
+ * Rollback to previous migration.
+ * $ php bin/rise database migration rollback
+ */
+
+require_once __DIR__.'/../vendor/autoload.php';
+
+service()->setService('command', new \Rise\Services\Command);
+service('command')
+	->setProjectRootPath(__DIR__.'/..')
+	->setArgv($argv)
+	->run();
