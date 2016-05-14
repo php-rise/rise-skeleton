@@ -13,17 +13,17 @@ return [
 	'default' => [
 		'driver' => 'pdo_mysql',
 		'unix_socket' => '/var/run/mysqld/mysqld.sock',
-		'dbname' => 'reach_framework',
+		'dbname' => 'rise_framework',
 		'charset' => 'UTF8',
-		'user' => 'reach',
+		'user' => 'rise',
 		'password' => 'fuckingtopsecret',
 	],
 	'session' => [
 		'driver' => 'pdo_mysql',
 		'host' => 'localhost',
-		'dbname' => 'reach_framework',
+		'dbname' => 'rise_framework',
 		'charset' => 'UTF8',
-		'user' => 'reach',
+		'user' => 'rise',
 		'password' => 'fuckingtopsecret',
 	],
 ];
