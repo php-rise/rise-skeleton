@@ -10,6 +10,8 @@
  *                ...
  *            ]
  *
+ * "defaultLocaleCode": Optional. Default locale code will be used when the locale code cannot be detected from url.
+ *
  * "translations": Translations.
  *                 Format: [
  *                     '<locale code>' => [
@@ -32,6 +34,8 @@ return [
 			'name' => 'English',
 		],
 	],
+
+	'defaultLocaleCode' => 'en',
 
 	'translations' => [
 		'en' => [
