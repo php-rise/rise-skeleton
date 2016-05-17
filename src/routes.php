@@ -7,4 +7,8 @@
  * @var \Rise\Components\Router\Scope $scope
  */
 
-$scope->get('', 'Home.index', 'root');
+$scope->createScope(function($scope) {
+	$scope->setBeforeHandlers(['CsrfValidator.validate']);
+
+	$scope->get('', 'Home.index', 'root');
+});
