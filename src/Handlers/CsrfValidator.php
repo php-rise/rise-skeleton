@@ -10,7 +10,6 @@ class CsrfValidator {
 		) {
 			$session = service('session');
 			if (!$session->validateCsrfToken($request->get($session->getCsrfTokenFormKey()))) {
-				var_dump('false');
 				return false;
 			}
 		}
