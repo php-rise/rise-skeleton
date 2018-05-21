@@ -1,4 +1,5 @@
 <?php
 require_once __DIR__.'/../vendor/autoload.php';
-service()->setService('initializer', new \Rise\Services\Initializer);
-service('initializer')->setProjectRootPath(__DIR__.'/..')->run();
+$container = new Rise\Services\Container();
+$initializer = $container->get('Rise\Services\Initializer');
+$initializer->setProjectRootPath(__DIR__.'/..')->run();

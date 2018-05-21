@@ -18,7 +18,7 @@
 	],
 	"require": {
 		"php": ">=7.0.0",
-		"hwguyguy/rise": "0.3.8"
+		"hwguyguy/rise": "0.4.1"
 	},
 	"autoload": {
 		"psr-4": {

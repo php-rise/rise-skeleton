@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a38bb3ba0716ffe6a5ca8c10d1c9b337",
+    "content-hash": "a2e526068acf177baacb13e67bd98bbc",
     "packages": [
         {
             "name": "baryshev/tree-route",
@@ -526,11 +526,11 @@
         },
         {
             "name": "hwguyguy/rise",
-            "version": "v0.3.8",
+            "version": "v0.4.1",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:hwguyguy-team/php-rise.git",
-                "reference": "ec785e43cfea7493d13140e1ab97dde01f6b2f33"
+                "reference": "096a91a470c3e4275f910250cbfab2a66b8eedc4"
             },
             "require": {
                 "baryshev/tree-route": "2.0.0",
@@ -557,7 +557,7 @@
                 }
             ],
             "description": "PHP Rise Framework",
-            "time": "2016-06-12T14:02:08+00:00"
+            "time": "2018-05-21T11:19:47+00:00"
         }
     ],
     "packages-dev": [],
