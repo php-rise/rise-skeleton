@@ -2,10 +2,10 @@
 /vendor
 
 # Ignore Node.js modules
-/node_modules
+node_modules
 
 # Ignore configuration of database. There is a "database.example.php" for reference.
-/configurations/database.php
+/config/database.php
 
 # Keep logs directory but ignore the content.
 /logs/*
