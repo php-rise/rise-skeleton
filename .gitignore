@@ -14,3 +14,9 @@ node_modules
 # Keep sessions directory but ignore the content.
 /sessions/*
 !/sessions/.keep
+
+# Ignore generated assets.
+/public/assets/default.bundle.js
+/public/assets/default.bundle.js.map
+/public/assets/default.css
+/public/assets/default.css.map

@@ -1,16 +1,36 @@
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path')
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+const ENV = process.env.NODE_ENV || 'development'
+const ROOT_PATH = path.resolve(__dirname)
+
+function root(...args) {
+	args.unshift(ROOT_PATH)
+	return path.join.apply(path, args)
+}
 
 module.exports = {
+	devtool: ENV === 'production' ? false : 'cheap-module-source-map',
+
 	entry: {
-		'default.js': './assets/js/default.js',
-		'default.css': './assets/scss/default.scss'
+		'default': [
+			'./assets/js/default.js',
+			'./assets/scss/default.scss'
+		]
 	},
+
 	output: {
-		path: './public/assets',
-		filename: '[name]'
+		path: root('/public/assets'),
+		filename: '[name].bundle.js',
+		sourceMapFilename: '[file].map'
 	},
+
+	resolve: {
+		extensions: ['.js']
+	},
+
 	module: {
-		loaders: [
+		rules: [
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
@@ -18,11 +38,34 @@ module.exports = {
 			},
 			{
 				test: /\.scss$/,
-				loader: ExtractTextPlugin.extract('style', 'css!sass')
+				use: ExtractTextPlugin.extract({
+					fallback: 'style-loader',
+					use: [
+						{
+							loader: 'css-loader',
+							options: Object.assign({
+								sourceMap: true,
+							}, (ENV === 'production' && {
+								minimize: true,
+								sourceMap: false,
+							})),
+						},
+						{
+							loader: 'sass-loader',
+							options: {
+								sourceMap: true,
+							}
+						}
+					],
+				}),
 			}
 		]
 	},
+
 	plugins: [
-		new ExtractTextPlugin('[name]')
+		new ExtractTextPlugin({
+			filename: ENV === 'production' ? '[name].[contenthash].css' : '[name].css',
+			allChunks: true,
+		})
 	]
 };
