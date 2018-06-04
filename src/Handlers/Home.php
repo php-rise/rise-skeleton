@@ -1,7 +1,7 @@
 <?php
 namespace App\Handlers;
 
-use Rise\Services\Http\Responder;
+use Rise\Http\Responder;
 
 class Home {
 	public function __construct(Responder $responder) {

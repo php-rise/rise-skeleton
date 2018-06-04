@@ -6,7 +6,7 @@
  * "rules": Rules for searching command.
  */
 return [
-	'namespaces' => ['App\Components\Command'],
+	'namespaces' => ['App\Commands'],
 	'rules' => [
 		'welcome' => 'Welcome.greeting',
 	],

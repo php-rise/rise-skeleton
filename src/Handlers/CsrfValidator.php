@@ -1,8 +1,8 @@
 <?php
 namespace App\Handlers;
 
-use Rise\Services\Http\Receiver;
-use Rise\Services\Session;
+use Rise\Http\Receiver;
+use Rise\Session;
 
 class CsrfValidator {
 	public function __construct(Receiver $receiver, Session $session) {

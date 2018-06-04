@@ -11,8 +11,8 @@
 
 require_once __DIR__.'/../vendor/autoload.php';
 
-$container = new Rise\Services\Container();
-$command = $container->get('Rise\Services\Command');
+$container = new Rise\Container();
+$command = $container->get('Rise\Command');
 $command->setProjectRootPath(__DIR__.'/..')
 	->setArgv($argv)
 	->run();

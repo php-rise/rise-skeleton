@@ -1,7 +1,7 @@
 <?php
-namespace App\Components\Command;
+namespace App\Commands;
 
-use Rise\Components\Command\BaseCommand;
+use Rise\Command\BaseCommand;
 
 class Welcome extends BaseCommand {
 	public function greeting() {
