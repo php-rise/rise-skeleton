@@ -4,7 +4,7 @@
  */
 
 /**
- * @var \Rise\Components\Router\Scope $scope
+ * @var \Rise\Router\Scope $scope
  */
 
 $scope->createScope(function($scope) {

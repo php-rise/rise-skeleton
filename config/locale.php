@@ -29,13 +29,13 @@
  */
 
 return [
+	'defaultLocaleCode' => 'en',
+
 	'locales' => [
 		'en' => [
 			'name' => 'English',
 		],
 	],
-
-	'defaultLocaleCode' => 'en',
 
 	'translations' => [
 		'en' => [
