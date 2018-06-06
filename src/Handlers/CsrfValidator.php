@@ -1,17 +1,17 @@
 <?php
 namespace App\Handlers;
 
-use Rise\Http\Receiver;
+use Rise\Http\Request;
 use Rise\Session;
 
 class CsrfValidator {
-	public function __construct(Receiver $receiver, Session $session) {
-		$this->receiver = $receiver;
+	public function __construct(Request $request, Session $session) {
+		$this->request = $request;
 		$this->session = $session;
 	}
 
 	public function validate() {
-		$request = $this->receiver->getRequest();
+		$request = $this->request;
 		if ($request->isMethod('POST')
 			|| $request->isMethod('PUT')
 			|| $request->isMethod('DELETE')

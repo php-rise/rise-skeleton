@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b0d1868789024e902e1f255867c80bc4",
+    "content-hash": "2ca744dd927dff24f2dec802c60823b2",
     "packages": [
         {
             "name": "baryshev/tree-route",
@@ -526,16 +526,19 @@
         },
         {
             "name": "hwguyguy/rise",
-            "version": "v0.5.2",
+            "version": "v0.6.0",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:hwguyguy/php-rise.git",
-                "reference": "d73800753bb2b825aa02ec9a3e3e8e8bb235c333"
+                "reference": "0ed75c702de9f641259a5806dfdb9a2c19cfa089"
             },
             "require": {
                 "baryshev/tree-route": "2.0.0",
                 "doctrine/dbal": "2.5.4",
                 "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7"
             },
             "type": "library",
             "autoload": {
@@ -544,6 +547,16 @@
                 },
                 "files": [
                     "src/helper.php"
+                ]
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Rise\\Test\\": "tests/"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "phpunit"
                 ]
             },
             "license": [
@@ -557,7 +570,7 @@
                 }
             ],
             "description": "PHP Rise Framework",
-            "time": "2018-06-04T06:40:00+00:00"
+            "time": "2018-06-06T10:45:39+00:00"
         }
     ],
     "packages-dev": [
@@ -1231,16 +1244,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "7.2.3",
+            "version": "7.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "42bb8f5b2cb36483907a20f45e4cd1665c24d8a7"
+                "reference": "00bc0b93f0ff4f557e9ea766557fde96da9a03dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/42bb8f5b2cb36483907a20f45e4cd1665c24d8a7",
-                "reference": "42bb8f5b2cb36483907a20f45e4cd1665c24d8a7",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/00bc0b93f0ff4f557e9ea766557fde96da9a03dd",
+                "reference": "00bc0b93f0ff4f557e9ea766557fde96da9a03dd",
                 "shasum": ""
             },
             "require": {
@@ -1311,7 +1324,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-06-03T06:05:05+00:00"
+            "time": "2018-06-05T03:40:05+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",

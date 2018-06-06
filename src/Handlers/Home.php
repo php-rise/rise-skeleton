@@ -1,14 +1,14 @@
 <?php
 namespace App\Handlers;
 
-use Rise\Http\Responder;
+use Rise\Http\Response;
 
 class Home {
-	public function __construct(Responder $responder) {
-		$this->responder = $responder;
+	public function __construct(Response $response) {
+		$this->response = $response;
 	}
 
 	public function index() {
-		$this->responder->html('home/index');
+		$this->response->html('home/index');
 	}
 }
