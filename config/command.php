@@ -8,6 +8,6 @@
 return [
 	'namespaces' => ['App\Commands'],
 	'rules' => [
-		'welcome' => 'Welcome.greeting',
+		'welcome' => 'Welcome.greeting Hello World',
 	],
 ];

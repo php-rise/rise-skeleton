@@ -6,7 +6,7 @@ use Rise\Http\Response;
 use App\Handlers\Errors\NotFound;
 
 final class NotFoundTest extends TestCase {
-	public function testHtml() {
+	public function testShowHtml() {
 		$response = $this->createMock(Response::class);
 
 		$response->expects($this->once())
@@ -14,6 +14,6 @@ final class NotFoundTest extends TestCase {
 			->with($this->equalTo('errors/404'));
 
 		$handler = new NotFound($response);
-		$handler->html();
+		$handler->showHtml();
 	}
 }

@@ -18,7 +18,7 @@
 	],
 	"require": {
 		"php": ">=7.0.0",
-		"hwguyguy/rise": "0.6.1"
+		"hwguyguy/rise": "0.6.3"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "^7"

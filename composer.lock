@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c4de0bfffa1c300a3117fd4d3836b0bf",
+    "content-hash": "f2978187798c5cf88482d0a735b52366",
     "packages": [
         {
             "name": "baryshev/tree-route",
@@ -526,11 +526,11 @@
         },
         {
             "name": "hwguyguy/rise",
-            "version": "v0.6.1",
+            "version": "v0.6.3",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:hwguyguy/php-rise.git",
-                "reference": "2400ad319c427232f54ef44a0d364caf842b258f"
+                "reference": "1b0cf0dbd77fdd8c76c49e306dcae5c9278e7be4"
             },
             "require": {
                 "baryshev/tree-route": "2.0.0",
@@ -538,6 +538,7 @@
                 "php": ">=7.0.0"
             },
             "require-dev": {
+                "mikey179/vfsstream": "^1",
                 "phpunit/phpunit": "^7"
             },
             "type": "library",
@@ -570,7 +571,7 @@
                 }
             ],
             "description": "PHP Rise Framework",
-            "time": "2018-06-06T14:13:54+00:00"
+            "time": "2018-06-10T16:19:59+00:00"
         }
     ],
     "packages-dev": [
@@ -1437,16 +1438,16 @@
         },
         {
             "name": "sebastian/diff",
-            "version": "3.0.0",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/diff.git",
-                "reference": "e09160918c66281713f1c324c1f4c4c3037ba1e8"
+                "reference": "366541b989927187c4ca70490a35615d3fef2dce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/e09160918c66281713f1c324c1f4c4c3037ba1e8",
-                "reference": "e09160918c66281713f1c324c1f4c4c3037ba1e8",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/366541b989927187c4ca70490a35615d3fef2dce",
+                "reference": "366541b989927187c4ca70490a35615d3fef2dce",
                 "shasum": ""
             },
             "require": {
@@ -1489,7 +1490,7 @@
                 "unidiff",
                 "unified diff"
             ],
-            "time": "2018-02-01T13:45:15+00:00"
+            "time": "2018-06-10T07:54:39+00:00"
         },
         {
             "name": "sebastian/environment",

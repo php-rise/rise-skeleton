@@ -8,5 +8,5 @@
  */
 return [
 	'routesFile' => 'src/routes.php',
-	'notFoundHandler' => 'Errors\NotFound.html',
+	'notFoundHandler' => 'Errors\NotFound.showHtml',
 ];

@@ -8,7 +8,7 @@ class NotFound {
 		$this->response = $response;
 	}
 
-	public function html() {
+	public function showHtml() {
 		$this->response->html('errors/404');
 	}
 }
