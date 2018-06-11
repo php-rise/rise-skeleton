@@ -13,7 +13,7 @@ final class NotFoundTest extends TestCase {
 			->method('html')
 			->with($this->equalTo('errors/404'));
 
-		$handler = new NotFound($response);
-		$handler->showHtml();
+		$handler = new NotFound();
+		$handler->showHtml($response);
 	}
 }

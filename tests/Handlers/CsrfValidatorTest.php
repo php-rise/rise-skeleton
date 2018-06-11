@@ -17,8 +17,8 @@ final class CsrfValidatorTest extends TestCase {
 			->method('isMethod')
 			->willReturn(false);
 
-		$handler = new CsrfValidator($request, $response, $session);
-		$this->assertNotSame(false, $handler->validate());
+		$handler = new CsrfValidator();
+		$this->assertNotSame(false, $handler->validate($request, $response, $session));
 	}
 
 	public function testValidateCsrfSuccess() {
@@ -34,8 +34,8 @@ final class CsrfValidatorTest extends TestCase {
 			->method('validateCsrfToken')
 			->willReturn(true);
 
-		$handler = new CsrfValidator($request, $response, $session);
-		$this->assertNotSame(false, $handler->validate());
+		$handler = new CsrfValidator();
+		$this->assertNotSame(false, $handler->validate($request, $response, $session));
 	}
 
 	public function testValidateCsrfFail() {
@@ -61,7 +61,7 @@ final class CsrfValidatorTest extends TestCase {
 			->with($this->equalTo('Invalid CSRF token'))
 			->will($this->returnSelf());
 
-		$handler = new CsrfValidator($request, $response, $session);
-		$this->assertFalse($handler->validate());
+		$handler = new CsrfValidator();
+		$this->assertFalse($handler->validate($request, $response, $session));
 	}
 }

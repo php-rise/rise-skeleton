@@ -13,7 +13,7 @@ final class HomeTest extends TestCase {
 			->method('html')
 			->with($this->equalTo('home/index'));
 
-		$handler = new Home($response);
-		$handler->index();
+		$handler = new Home();
+		$handler->index($response);
 	}
 }
