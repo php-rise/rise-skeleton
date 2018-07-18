@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4543a30513f6fec5fc14c0d72aab24f8",
+    "content-hash": "72df41197c083495aca306e74b638d15",
     "packages": [
         {
             "name": "php-rise/rise",
