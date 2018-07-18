@@ -1,2 +1,3 @@
-var welcome = require('./welcome');
-welcome.greeting();
+import {greeting} from './welcome'
+
+greeting();

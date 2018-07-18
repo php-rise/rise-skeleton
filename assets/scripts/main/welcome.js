@@ -1,5 +1,3 @@
-module.exports = {
-	greeting() {
-		console.log('Welcome to PHP Rise Framework.');
-	}
-};
+export function greeting() {
+	console.log('Welcome to PHP Rise Framework.');
+}
