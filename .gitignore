@@ -1,0 +1,22 @@
+# Ignore Composer packages
+/vendor
+
+# Ignore Node.js modules
+node_modules
+
+# Ignore configuration of database. There is a "database.example.php" for reference.
+/config/database.php
+
+# Keep logs directory but ignore the content.
+/logs/*
+!/logs/.keep
+
+# Keep sessions directory but ignore the content.
+/sessions/*
+!/sessions/.keep
+
+# Ignore generated assets.
+/public/assets/main.bundle.js
+/public/assets/main.bundle.js.map
+/public/assets/main.css
+/public/assets/main.css.map

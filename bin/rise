@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+/**
+ * Usage:
+ *
+ * $ php bin/rise COMMAND [COMMAND_ARG...]
+ *
+ * Help
+ * $ php bin/rise help
+ */
+
+require_once __DIR__.'/../vendor/autoload.php';
+
+$container = new Rise\Container();
+$command = $container->get('Rise\Command');
+$command->setProjectRoot(__DIR__.'/..')
+	->setArgv($argv)
+	->run();

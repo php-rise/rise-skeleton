@@ -1,0 +1,34 @@
+* {
+	box-sizing: border-box;
+}
+
+body, p, ol, ul, h1, h2, h3, h4, h5, h6 {
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+a {
+	color: inherit;
+}
+
+ol, ul {
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+	-webkit-padding-start: 0;
+	padding-left: 0;
+}
+
+input, textarea, select {
+	font: inherit;
+}
+
+table {
+	border-collapse: collapse;
+}
