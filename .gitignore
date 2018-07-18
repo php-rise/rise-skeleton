@@ -16,7 +16,7 @@ node_modules
 !/sessions/.keep
 
 # Ignore generated assets.
-/public/assets/default.bundle.js
-/public/assets/default.bundle.js.map
-/public/assets/default.css
-/public/assets/default.css.map
+/public/assets/main.bundle.js
+/public/assets/main.bundle.js.map
+/public/assets/main.css
+/public/assets/main.css.map

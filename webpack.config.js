@@ -13,9 +13,9 @@ module.exports = {
 	devtool: ENV === 'production' ? false : 'cheap-module-source-map',
 
 	entry: {
-		'default': [
-			'./assets/js/default.js',
-			'./assets/scss/default.scss'
+		'main': [
+			'./assets/scripts/main/index.js',
+			'./assets/styles/main/index.scss'
 		]
 	},
 

@@ -3,27 +3,31 @@
  * The framework will execute "database.php" instead of this file. Please make
  * sure the configurations are in "database.php".
  *
- * Doctrine DBAL 2 configurations.
+ * "default": Default connection name.
  *
- * References:
- * http://doctrine-orm.readthedocs.org/projects/doctrine-dbal/en/latest/reference/configuration.html
- * http://www.doctrine-project.org/api/dbal/2.5/class-Doctrine.DBAL.DriverManager.html
+ * "connections": Configurations of different connections.
+ *                Format: [
+ *                    '<name>' => [
+ *                        'dsn' => '<PDO DSN>', // See http://php.net/manual/en/ref.pdo-mysql.connection.php
+ *                        'username' => '<username>',
+ *                        'password' => '<password>',
+ *                        'options' => [], // See http://php.net/manual/en/pdo.setattribute.php
+ *                        'migrate' => <bool>, // Indicate this database config is suitable for running migrations
+ *                    ]
+ *                ]
+ *
+ * @var array
  */
 return [
-	'default' => [
-		'driver' => 'pdo_mysql',
-		'unix_socket' => '/var/run/mysqld/mysqld.sock',
-		'dbname' => 'rise_framework',
-		'charset' => 'UTF8',
-		'user' => 'rise',
-		'password' => 'fuckingtopsecret',
-	],
-	'session' => [
-		'driver' => 'pdo_mysql',
-		'host' => 'localhost',
-		'dbname' => 'rise_framework',
-		'charset' => 'UTF8',
-		'user' => 'rise',
-		'password' => 'fuckingtopsecret',
-	],
+	'default' => 'master',
+
+	'connections' => [
+		'master' => [
+			'dsn' => 'mysql:unix_socket=/var/run/mysqld/mysqld.sock;dbname=rise_framework;charset=utf8',
+			//'dsn' => 'mysql:host=localhost;port=3307;dbname=rise_framework;charset=utf8',
+			'username' => 'rise',
+			'password' => 'pass',
+			'migrate' => true,
+		],
+	]
 ];

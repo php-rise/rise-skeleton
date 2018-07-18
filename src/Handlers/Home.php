@@ -1,10 +1,10 @@
 <?php
 namespace App\Handlers;
 
-use Rise\Http\Response;
+use Rise\{Response, Template};
 
 class Home {
-	public function index(Response $response) {
-		$response->html('home/index');
+	public function index(Response $response, Template $template) {
+		$response->asHtml()->send($template->render('home/index'));
 	}
 }
